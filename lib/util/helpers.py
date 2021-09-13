@@ -2,15 +2,15 @@
 class Helpers:
 
     @staticmethod
-    def string_to_list(str):
+    def string_to_list(str) -> list:
         list = str.split()
         return list
     
     @staticmethod
-    def list_to_string(list):
+    def list_to_string(list) -> str:
         str = ' '.join(list)
         return str
-
-helper = Helpers
-print(helper.string_to_list('fgjds khfj'))
-print(helper.list_to_string(['fgjds', 'khfj']))
+    
+    @staticmethod
+    def string_to_lowercase(str) -> str:
+        return str.lower()
