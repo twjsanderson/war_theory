@@ -1,4 +1,4 @@
-from util.helpers import Helpers
+from util.helpers import *
 
 class Input_Ouput:
     string_to_lowercase = Helpers.string_to_lowercase
@@ -17,15 +17,16 @@ class Input_Ouput:
         return lower_case_user_input
 
     @classmethod
-    def process_input(cls, user_input, game_state, output):
-        # take user input in response to question
+    def process_input(cls, user_input, game_state, default_message):
+        return Helpers.recursive_lookup(user_input, game_state, default_message)
         # update game state with choice
         # output next step in game
-        return 
 
     @classmethod
     def process_next_step():
         # take in game steps and process next prompt to be fed into take_input
-    
+        return ''
 
 
+if __name__ == '__main__':
+    Input_Ouput
