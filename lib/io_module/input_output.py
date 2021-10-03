@@ -17,8 +17,20 @@ class Input_Ouput:
         return lower_case_user_input
 
     @classmethod
-    def process_input(cls, user_input, game_state, default_message):
-        return Helpers.recursive_lookup(user_input, game_state, default_message)
+    def process_input(cls, user_input, game_state, default_message = 'Command not found, please re-enter. For a list of basic commands type `-help`.'):
+        output = Helpers.recursive_lookup(user_input, game_state, default_message)
+        return output
+        # # Check if output is a function (ie. sys.exit())
+        # if hasattr(output, '__call__'): 
+        #     return output()
+
+        # if output == default_message:
+        #     return cls.take_input(default_message)
+
+        # # base case, return string
+        # return cls.take_input(output)
+
+
         # update game state with choice
         # output next step in game
 

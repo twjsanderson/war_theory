@@ -16,11 +16,11 @@ class Helpers:
         return str.lower()
 
     @classmethod
-    def recursive_lookup(cls, input, dictionary, default_message = ''):
+    def recursive_lookup(cls, input, dictionary, default_message):
         if input in dictionary: 
             return dictionary[input]
 
-        for value in dictionary.values():
+        for value in dictionary.items():
             if isinstance(value, dict):
                 response = cls.recursive_lookup(input, value)
                 if response is not None: 
