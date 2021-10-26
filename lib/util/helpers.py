@@ -27,6 +27,19 @@ class Helpers:
                     return response
 
         return default_message
+    
+    @classmethod
+    def response_lookup(cls, input, dictionary, default_message = 'nope'):
+        if input in dictionary: 
+            return dictionary[input]
+
+        # for value in dictionary.items():
+        #     if isinstance(value, dict):
+        #         response = cls.response_lookup(input, value)
+        #         if response is not None: 
+        #             return response
+
+        return default_message
 
 if __name__ == '__main__':
     Helpers

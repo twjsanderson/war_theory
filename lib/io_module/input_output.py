@@ -17,8 +17,8 @@ class Input_Ouput:
         return lower_case_user_input
 
     @classmethod
-    def process_input(cls, user_input, game_state, default_message = 'Command not found, please re-enter. For a list of basic commands type `-help`.'):
-        output = Helpers.recursive_lookup(user_input, game_state, default_message)
+    def process_input(cls, user_input, game_state_dict, instruction_number, default_message = 'Command not found, please re-enter. For a list of basic commands type `-help`.'):
+        output = Helpers.recursive_lookup(user_input, game_state_dict, default_message)
         return output
         # # Check if output is a function (ie. sys.exit())
         # if hasattr(output, '__call__'): 
@@ -35,7 +35,8 @@ class Input_Ouput:
         # output next step in game
 
     @classmethod
-    def process_next_step():
+    def process_next_step(cls, user_input, response_options):
+        return Helpers.response_lookup(user_input, response_options)
         # take in game steps and process next prompt to be fed into take_input
         return ''
 

@@ -1,23 +1,13 @@
-from sys import version
 from constants import *
-from io_module.input_output import *
+from game_module.game import Game
 
 
 def main():
+    # prints out start up art & description
     print(start_up_art)
     print(start_up_description)
-    for x in game_instructions:
-        test = Input_Ouput.take_input(x)
-        print(Input_Ouput.process_input(test, game_basics_dictiontary))
 
-    
-
-
-    # li = { "thing": 3212}
-
-    # for key, value in li.items():
-    #     print(key, value)
-    
+    Game.intro_1()
 
 if __name__ == '__main__':
     main()
