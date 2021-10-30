@@ -60,6 +60,19 @@ story = [
     '''  
         {}, Captain of the famed King's Guard, you are again being called to protect your people in their time of need and repel 
         the Northern hordes. As was done in the old days, choose two of your best warriors, and meet me in the war room to we prepare for the battle.'
+
+        (Hit enter to continue)
+    ''',
+    '''
+        'With that, you exit the hall deep in thought. Who among the remaining King's guard should you call to fight by your side...'
+        
+        PALADIN, Ardeer. Fast, strong and fearless. (Strength +2, Hit points +2, Defense +2)
+        SORCERESS, Quillian. Cunning and powerful. (Strength +4, Hit points +1, Defense +1)
+        RANGER, Rafe. Precise and quick. (Strength +3, Hit points +1, Defense +2)
+        MONK, Cathos. Patient, calm and unrelenting. (Strength +1, Hit points +4, Defense +1)
+        ROGUE, Selwyn. Quiet and deadly. (Strength +2, Hit points +1, Defense +3)
+
+        Choose your first companion: 
     ''',
     
 ]

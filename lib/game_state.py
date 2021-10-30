@@ -40,6 +40,19 @@ game_state = {
         }
             
     },
+    5 : {
+        'story_point': story[3],
+        'responses': {
+            6:6
+        }    
+    },
+    6 : {
+        'story_point': story[3],
+        'responses': {
+            7:7
+        }
+            
+    },
 
     
     # '''
