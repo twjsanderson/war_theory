@@ -1,19 +1,21 @@
-from game_state import *
 from art import *
-from game_module.game import Game
-# from character_module.character import Character
+from engine import Game_Engine
+from state import *
 
-
-def main():
-    # prints out start up art & description
-    print(start_up_art)
-    print(start_up_description)
-
-    Game.run_game(1)
-    # player = Character('tom')
-
-    # player.show_name()
+class Main:
+    def __init__(self):
+        self.game_engine = Game_Engine(state)
+    
+    def show_start_up(self):
+        els = [start_up_art, start_up_description]
+        for el in els:
+            print(el)
+    
+    def init_game(self):
+        self.show_start_up() # move to game_engine so we can call it on line 32
+        input('>>> ')
+        self.game_engine.process_actions()
+        self.game_engine.process_next_step()
 
 if __name__ == '__main__':
-    main()
-
+    Main().init_game()
